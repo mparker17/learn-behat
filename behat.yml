@@ -1,0 +1,10 @@
+# behat.yml
+
+# This is a sample testing profile for Google.
+google:
+    paths:
+        features: features/google
+        bootstrap: %behat.paths.features%/bootstrap
+    extensions:
+        Behat\MinkExtension\Extension:
+            base_url:  'http://google.ca'
