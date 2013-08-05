@@ -8,3 +8,18 @@ google:
     extensions:
         Behat\MinkExtension\Extension:
             base_url:  'http://google.ca'
+
+# This is a sample testing profile for testing the Drupal app.
+bradysmeats:
+    paths:
+        features: features/bradysmeats
+        bootstrap: %behat.paths.features%/bootstrap
+    extensions:
+        Behat\MinkExtension\Extension:
+            base_url:  'http://bradysmeats.com'
+        Drupal\DrupalExtension\Extension:
+            blackbox: ~
+            drush:
+                alias: gca
+            region_map:
+                Header: "#header"
